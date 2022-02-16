@@ -44,7 +44,7 @@ budget_data.pop('Date')
 for month in budget_data:
     total_months+=1 #Increase count for total months
     month_budget = int(budget_data[month]) #extract month's budget casted as integer
-    net =+ month_budget #Roll year's budget into net profit/loss
+    net += month_budget #Roll year's budget into net profit/loss
     
     # Check if a max increase (If Equal, keep first found)
     if month_budget > max_increase:
@@ -61,7 +61,6 @@ average = net / total_months
 
 # Print Results
 print("Financial Analysis\n----------------------------")
-print(f"Total Months: {total_months}")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net:.2f}")
 print(f"Average  Change: ${average:.2f}")
