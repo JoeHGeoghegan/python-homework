@@ -1,0 +1,14 @@
+----------REPORT----------
+Number of unique records captured: 11
+Number of sales analyized: 74124
+spicy miso ramen: {'01-count': 9238, '02-revenue': 81624.0, '03-cogs': 34010.0, '04-profit': 47614.0}
+tori paitan ramen: {'01-count': 9156, '02-revenue': 88634.0, '03-cogs': 40908.0, '04-profit': 47726.0}
+truffle butter ramen: {'01-count': 8982, '02-revenue': 94164.0, '03-cogs': 47082.0, '04-profit': 47082.0}
+tonkotsu ramen: {'01-count': 9288, '02-revenue': 88400.0, '03-cogs': 40800.0, '04-profit': 47600.0}
+vegetarian spicy miso: {'01-count': 9216, '02-revenue': 81864.0, '03-cogs': 34110.0, '04-profit': 47754.0}
+shio ramen: {'01-count': 9180, '02-revenue': 74184.0, '03-cogs': 33720.0, '04-profit': 40464.0}
+miso crab ramen: {'01-count': 8890, '02-revenue': 78648.0, '03-cogs': 39324.0, '04-profit': 39324.0}
+nagomi shoyu: {'01-count': 9132, '02-revenue': 73260.0, '03-cogs': 33300.0, '04-profit': 39960.0}
+soft-shell miso crab ramen: {'01-count': 9130, '02-revenue': 94388.0, '03-cogs': 47194.0, '04-profit': 47194.0}
+burnt garlic tonkotsu ramen: {'01-count': 9070, '02-revenue': 94780.0, '03-cogs': 40620.0, '04-profit': 54160.0}
+vegetarian curry + king trumpet mushroom ramen: {'01-count': 8824, '02-revenue': 86918.0, '03-cogs': 46802.0, '04-profit': 40116.0}
