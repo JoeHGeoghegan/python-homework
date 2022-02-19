@@ -13,11 +13,11 @@ The Analysis calculates each of the following:
 
 ## Imports
 import csv # Used for reading CSV file
+from pathlib import Path # Used for ensuring readable file paths
 #from pathlib import Path # Used in establishing CSV file location/path
-
 ## Variables
 #Path Variables
-data_path = "./Resources/budget_data.csv"
+data_path = Path("./Resources/budget_data.csv")
 
 # Working Data Variables
 budget_data = {} #Dictionary to contain csv data
@@ -45,7 +45,7 @@ for month in budget_data:
     total_months+=1 #Increase count for total months
     month_budget = int(budget_data[month]) #extract month's budget casted as integer
     net += month_budget #Roll year's budget into net profit/loss
-    
+
     # Check if a max increase (If Equal, keep first found)
     if month_budget > max_increase:
         max_increase = month_budget
@@ -55,7 +55,7 @@ for month in budget_data:
         max_decrease = month_budget
         max_decrease_timestamp = month
     #else statement is unnecessary, line added for clarity
-    
+
 #Calculate Average Profit/Losses
 average = net / total_months
 
