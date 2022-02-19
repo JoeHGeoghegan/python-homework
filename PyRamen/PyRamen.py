@@ -26,11 +26,11 @@ sales = []
     # Inputs:
         # a csv file pathway (String)
         # header titles (List of strings)
-def readCSV(path,dict_categories):
+def readCSV(path):
     result = []
     with open(path) as csv_data: # Open Menu CSV File
         csv_reader = csv.reader(csv_data) # Create csv reader
-        next(csv_reader) #skip header
+        dict_categories = next(csv_reader) #skip header
         for row in csv_reader: #read CSV by rows
             add_dict = {} #init empty dict
             row_count = 0 #init row count for dict_categories loop
@@ -41,10 +41,14 @@ def readCSV(path,dict_categories):
             #to make list of list, use row variable instead and remove above for loop, variables, and input
     return result
 
+# # Read in the menu data into the menu list
+# menu = readCSV(menu_filepath, ['Item','Category','Description','Price','Cost'])
+# # Read in the sales data into the sales list
+# sales = readCSV(sales_filepath, ['Line_Item_ID','Date','Credit_Card_Number','Quantity','Menu_Item'])
 # Read in the menu data into the menu list
-menu = readCSV(menu_filepath, ['Item','Category','Description','Price','Cost'])
+menu = readCSV(menu_filepath)
 # Read in the sales data into the sales list
-sales = readCSV(sales_filepath, ['Line_Item_ID','Date','Credit_Card_Number','Quantity','Menu_Item'])
+sales = readCSV(sales_filepath)
 
 # Initialize dict object to hold our key-value pairs of items and metrics
 report = {}
@@ -69,11 +73,11 @@ for sale_data in sales: #KEYS: 'Line_Item_ID','Date','Credit_Card_Number','Quant
         }
 
     # For every row in our sales data, loop over the menu records to determine a match
-    for menu_item in menu: #KEYS: 'Item','Category','Description','Price','Cost'
+    for menu_item in menu: #KEYS: 'item', 'category', 'description', 'price', 'cost'
         # Initialize menu data variables
-        Item = menu_item['Item'] # Item Reference
-        Price = float(menu_item['Price']) # Price Reference
-        Cost = float(menu_item['Cost']) # Cost Reference
+        Item = menu_item['item'] # Item Reference
+        Price = float(menu_item['price']) # Price Reference
+        Cost = float(menu_item['cost']) # Cost Reference
             
         # If the item value in our sales data is equal to the any of the items in the menu, then begin tracking metrics for that item
         if Item == Menu_Item:
